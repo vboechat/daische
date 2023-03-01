@@ -4,8 +4,8 @@
 
 ## What is Daische?
 Daische is a daily scheduler where you can organize your daily tasks. <br />
-It has been developed using Next.js, React, TypeScript, MariaDB and NextAuth. <br />
-And was deployed using Vercel for the web application and PlanetScale for the database.
+It has been developed using Next.js, React, TypeScript, MariaDB and NextAuth and
+was deployed using Vercel for the web application and PlanetScale for the database.
 
 ## Demo
 The current version of Daische is available at Vercel and can be accessed at the following link: [Daische Demo](https://daische.vercel.app/)
