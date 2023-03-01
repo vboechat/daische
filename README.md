@@ -3,15 +3,15 @@
 ![Image with Daische Logo](./public/daische-logo.png "Daische Logo")
 
 ## What is Daische?
-Daische is a daily scheduler where you can organize your daily tasks.
-It has been developed using Next.js, React, TypeScript, MariaDB and NextAuth.
+Daische is a daily scheduler where you can organize your daily tasks. <br />
+It has been developed using Next.js, React, TypeScript, MariaDB and NextAuth. <br />
 And was deployed using Vercel for the web application and PlanetScale for the database.
 
 ## Demo
 The current version of Daische is available at Vercel and can be accessed at the following link: [Daische Demo](https://daische.vercel.app/)
 
 ## Run locally
-To run Daische locally, you need to have Node.js installed on your machine.
+To run Daische locally, you need to have Node.js installed on your machine. <br />
 If you meet this requirement, follow the steps below:
 
 1. Clone the repository
@@ -21,7 +21,7 @@ If you meet this requirement, follow the steps below:
 5. Check your console for the URL where the application is running, and you're done!
 
 ## Contributing
-Thank you for your interest in contributing to Daische!
+Thank you for your interest in contributing to Daische! <br />
 Steps to contribute:
 
 1. Fork the repository and clone it
