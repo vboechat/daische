@@ -20,13 +20,13 @@ export const TaskItem = ({ id, time, task }: TaskItemProps) => {
       <Td width="20%" textAlign="center">
         {time}
       </Td>
-      <Td width="60%" wordBreak="break-all">
+      <Td width="60%" wordBreak="break-word">
         <Text as="span" title={shouldDisplayTaskTitle}>
           {taskShort}
         </Text>
       </Td>
       <Td width="20%">
-        <Flex gap={4}>
+        <Flex gap={4} display={{ sm: "flex" }}>
           <EditTaskAction id={id} />
           <DeleteTaskAction id={id} />
         </Flex>
