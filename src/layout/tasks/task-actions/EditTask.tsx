@@ -55,7 +55,7 @@ export const EditTaskAction = ({ id }: EditTaskActionProps) => {
       });
     });
     setModalKey((prev) => prev + 1);
-  }, [id, isLoading]);
+  }, [id, taskStore.tasks]);
 
   return (
     <>
