@@ -12,13 +12,10 @@ type TaskData = {
 export const MenuNewTaskItem = () => {
   const taskStore = useTasksStore();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isLoading, setIsLoading] = React.useState(false);
   const toast = useToast();
 
   const handleCreateTasks = async (data: TaskData) => {
-    setIsLoading(true);
     await taskStore.createTask(data).then(() => taskStore.fetchTasks());
-    setIsLoading(false);
     onClose();
     toast({
       title: "Task created",
@@ -35,7 +32,6 @@ export const MenuNewTaskItem = () => {
       <TaskFormModal
         isOpen={isOpen}
         onClose={onClose}
-        isLoading={isLoading}
         modalHeader="Create task"
         confirmButtonText="Create"
         onCreate={handleCreateTasks}

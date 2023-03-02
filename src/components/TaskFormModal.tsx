@@ -40,7 +40,6 @@ type TaskModalProps = {
   onClose: () => void;
   onCreate?: (data: TaskObject) => Promise<void>;
   onEdit?: (data: Omit<TaskType, "userEmail">) => Promise<void>;
-  isLoading: boolean;
   modalHeader: string;
   confirmButtonText: string;
   timeStart?: string;
@@ -53,7 +52,6 @@ export const TaskFormModal = ({
   onClose,
   onCreate,
   onEdit,
-  isLoading,
   modalHeader,
   confirmButtonText,
   timeStart = "00:00",
@@ -64,7 +62,7 @@ export const TaskFormModal = ({
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<TaskObject>({
     resolver: zodResolver(TaskObjectData),
     defaultValues: {
@@ -138,7 +136,7 @@ export const TaskFormModal = ({
             type="submit"
             onClick={handleSubmit(handleTasks)}
           >
-            {isLoading ? <Spinner size="sm" /> : confirmButtonText}
+            {isSubmitting ? <Spinner size="sm" /> : confirmButtonText}
           </Button>
         </ModalFooter>
       </ModalContent>
