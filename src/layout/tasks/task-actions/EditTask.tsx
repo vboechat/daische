@@ -71,7 +71,7 @@ export const EditTaskAction = ({ id }: EditTaskActionProps) => {
           isOpen={isOpen}
           onClose={onClose}
           modalHeader="Edit task"
-          confirmButtonText="Edit"
+          confirmButtonText="Save"
           onEdit={handleTasks}
           timeStart={task?.timeStart}
           timeEnd={task?.timeEnd}
