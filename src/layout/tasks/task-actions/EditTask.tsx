@@ -19,12 +19,10 @@ export const EditTaskAction = ({ id }: EditTaskActionProps) => {
   const [task, setTask] = React.useState<TaskData>();
   const taskStore = useTasksStore();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isLoading, setIsLoading] = React.useState(false);
   const [modalKey, setModalKey] = React.useState<number>(0);
   const toast = useToast();
 
   const handleTasks = async (data: TaskData) => {
-    setIsLoading(true);
     await taskStore
       .updateTask({
         id,
@@ -34,7 +32,6 @@ export const EditTaskAction = ({ id }: EditTaskActionProps) => {
         taskStore.fetchTasks();
         setTask(data);
       });
-    setIsLoading(false);
     onClose();
     toast({
       title: "Task edited successfully",
@@ -73,7 +70,6 @@ export const EditTaskAction = ({ id }: EditTaskActionProps) => {
           key={modalKey}
           isOpen={isOpen}
           onClose={onClose}
-          isLoading={isLoading}
           modalHeader="Edit task"
           confirmButtonText="Edit"
           onEdit={handleTasks}
