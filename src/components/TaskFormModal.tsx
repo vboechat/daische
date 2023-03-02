@@ -22,8 +22,10 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 const TaskObjectData = z.object({
-  timeStart: z.string({ required_error: "Required test1" }).min(1),
-  timeEnd: z.string({ required_error: "Required test2" }).min(1),
+  timeStart: z
+    .string({ required_error: "Time start must not be empty" })
+    .min(1),
+  timeEnd: z.string({ required_error: "Time end must not be empty" }).min(1),
   task: z
     .string()
     .trim()
