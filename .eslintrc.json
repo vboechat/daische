@@ -1,3 +1,6 @@
 {
-  "extends": ["next/core-web-vitals", "@vboechat/eslint-config/lint"]
+  "extends": ["next/core-web-vitals", "@vboechat/eslint-config/lint"],
+  "rules": {
+    "linebreak-style": "off"
+  }
 }
