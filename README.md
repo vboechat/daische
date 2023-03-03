@@ -15,9 +15,9 @@ To run Daische locally, you need to have Node.js installed on your machine. <br 
 If you meet this requirement, follow the steps below:
 
 1. Clone the repository
-2. Install the dependencies using `npm install`
+2. Install the dependencies using `yarn`
 3. Rename the `.env.example` file to `.env` and fill in the environment variables
-4. Run the application using `npm run dev`
+4. Run the application using `yarn dev`
 5. Check your console for the URL where the application is running, and you're done!
 
 ## Contributing
