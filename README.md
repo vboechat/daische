@@ -42,6 +42,8 @@ The following environment variables are necessary for the application to run:
 | Environment name     | Description                         |
 |----------------------|-------------------------------------|
 | DATABASE_URL         | Your MySQL / MariaDB database URL   |
+| DIRECT_URL           | Database direct URL                 |
+| SHADOW_URL           | Database shadow URL                 |
 | NEXTAUTH_URL         | Your website URL                    |
 | NEXTAUTH_SECRET      | Used to encrypt NextAuth JWT        |
 | GOOGLE_CLIENT_ID     | Your Google oAuth 2.0 client ID     |
